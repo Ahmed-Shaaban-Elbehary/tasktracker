@@ -1,4 +1,8 @@
 <header class="d-flex justify-content-between align-items-center mb-5">
   <h1>{{title}}</h1>
-  <app-button btnStyle="btn btn-outline-primary" text="Add" (btnClick)="toggleAddTask()"></app-button>
+  <app-button
+  *ngIf="hasRoute('/')"
+  btnStyle="btn {{ showAddToggle ? 'btn-outline-danger' : 'btn-outline-primary' }}"
+  text="{{ showAddToggle ? 'Close' : 'Add' }}"
+  (btnClick)="toggleAddTask()"></app-button>
 </header>

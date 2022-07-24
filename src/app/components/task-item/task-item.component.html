@@ -1,9 +1,22 @@
-<div class="card mb-2">
+<div
+  class="card pointer mb-2"
+  [ngClass]="{ 'bg-success': task.reminder }"
+  (dblclick)="OnToggle(task)"
+>
   <ul class="list-group list-group-flush">
     <li class="list-group-item">
-      <strong>{{task.id}} &dash; </strong> {{task.day}}
-      <fa-icon class="btn float-end text-danger" [icon]="iconTimes"></fa-icon>
-      <p> {{task.text}}</p>
+      <strong>{{ task.id }} &dash; </strong> {{ task.day }}
+      <fa-icon
+        class="btn float-end text-warning"
+        [icon]="iconPen"
+        (click)="UpdateTask(task)"
+        ></fa-icon>
+      <fa-icon
+        class="btn float-end text-danger"
+        [icon]="iconTimes"
+        (click)="OnDelete(task)"
+      ></fa-icon>
+      <p>{{ task.text }}</p>
     </li>
   </ul>
 </div>

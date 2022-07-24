@@ -1,0 +1,17 @@
+<div *ngIf="showAddToggle" class="card p-3 mb-3">
+  <form (ngSubmit)="OnSubmit()">
+    <div class="mb-3">
+      <label for="text" class="form-label">Task</label>
+      <input type="text" class="form-control" id="text" name="text" [(ngModel)]="text" placeholder="Add Task">
+    </div>
+    <div class="mb-3">
+      <label for="day" class="form-label">Day</label>
+      <input type="date" class="form-control" id="day" name="day" [(ngModel)]="day" placeholder="Add Date & Time">
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="reminder" name="reminder" [(ngModel)]="reminder">
+      <label class="form-check-label" for="reminder">Set Reminder</label>
+    </div>
+    <button type="submit" class="btn btn-block btn-outline-primary w-100">Add New Task</button>
+  </form>
+</div>
