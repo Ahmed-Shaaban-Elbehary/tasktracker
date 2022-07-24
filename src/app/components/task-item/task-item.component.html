@@ -7,11 +7,6 @@
     <li class="list-group-item">
       <strong>{{ task.id }} &dash; </strong> {{ task.day }}
       <fa-icon
-        class="btn float-end text-warning"
-        [icon]="iconPen"
-        (click)="UpdateTask(task)"
-        ></fa-icon>
-      <fa-icon
         class="btn float-end text-danger"
         [icon]="iconTimes"
         (click)="OnDelete(task)"

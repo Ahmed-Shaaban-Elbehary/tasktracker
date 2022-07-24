@@ -26,10 +26,6 @@ export class TasksComponent implements OnInit, OnDestroy {
     this.service.addTask(task).subscribe((task) => (this.tasks.push(task)));
   }
 
-  updateTask(task: Task){
-    const result = this.service.updateTask(task).subscribe( () => task);
-    console.log(result);
-  }
 
   DeleteTask(task: Task) {
     this.result = this.service

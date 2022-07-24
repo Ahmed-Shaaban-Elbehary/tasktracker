@@ -10,7 +10,7 @@
       "id": 2,
       "text": "Gym Class",
       "day": "Aug 12th at 7:30 pm",
-      "reminder": true
+      "reminder": false
     },
     {
       "id": 3,
@@ -21,7 +21,7 @@
     {
       "text": "ahmed_elbehary",
       "day": "2022-07-20",
-      "reminder": true,
+      "reminder": false,
       "id": 4
     }
   ]
